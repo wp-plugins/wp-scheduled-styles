@@ -7,6 +7,16 @@
 
 $styleSchedule = $this->read_schedule('active');
 
+$theme = wp_get_theme();
+$files = $theme->get_files();
+$cssFiles = array();
+foreach($files as $key => $value){
+	$length = strlen('.css');
+	if( (substr($key, -$length) === '.css') ) {
+		$cssFiles[]=$key;
+	}
+}
+
 if($_POST['submit'])
 {
 ?>
@@ -24,7 +34,11 @@ if($_POST['submit'])
 <div id='newStyleTemplate'>
 	<div class='scheduledItem' id='newStyleNUMZ'>
 		<div class='styleSheetCol'>
-			<input name='newStyleNUMZ-stylesheet' type='text' class='required' maxlength='50' />
+			<select name='newStyleNUMZ-stylesheet' class='required'>
+			<?php foreach($cssFiles as $cssFile){?>
+				<option value="<?php echo $cssFile; ?>"><?php echo $cssFile; ?></option>
+			<?php }?>
+			</select>
 		</div>
 		<div class='startTimeCol'>
 			<input name='newStyleNUMZ-startTime' type='text' size='11' class='datePicker required' maxlength="10" />
@@ -54,16 +68,21 @@ if($_POST['submit'])
 		$id=$scheduledItem->id;
 		$startTime= $scheduledItem->startTime;
 		$endTime=$scheduledItem->endTime;
-		$cssFile=$scheduledItem->cssFile;
+		$cssFileSelected=$scheduledItem->cssFile;
 		$repeatedYearly= '';
 		if($scheduledItem->repeatYearly ==1)
 			$repeatedYearly= " checked";
 			
 		?>
 		<div class='scheduledItem' id='scheduledItem-<?php echo $id; ?>'>
-			<div class='styleSheetCol'>
-				<input name='items<?php echo $id; ?>-stylesheet' class='required' value='<?php echo $cssFile;?>' maxlength='50' />
+			<div class='styleSheetCol'>				
+				<select name='items<?php echo $id; ?>-stylesheet' class='required'>
+				<?php foreach($cssFiles as $cssFile){?>
+					<option value="<?php echo $cssFile;?>" <?php if($cssFileSelected==$cssFile) echo " selected='selected'";?>><?php echo $cssFile; ?></option>
+				<?php }?>
+				</select>
 			</div>
+			
 			<div class='startTimeCol'>
 				<input name='items<?php echo $id; ?>-startTime' type='text' size='11' class='datePicker required' value='<?php echo $startTime; ?>' maxlength="10" />
 			</div>
