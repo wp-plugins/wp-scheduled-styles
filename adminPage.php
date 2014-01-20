@@ -75,7 +75,7 @@ if($_POST['submit'])
 			
 		?>
 		<div class='scheduledItem' id='scheduledItem-<?php echo $id; ?>'>
-			<div class='styleSheetCol'>				
+			<div class='styleSheetCol ss-col'>				
 				<select name='items<?php echo $id; ?>-stylesheet' class='required'>
 				<?php foreach($cssFiles as $cssFile){?>
 					<option value="<?php echo $cssFile;?>" <?php if($cssFileSelected==$cssFile) echo " selected='selected'";?>><?php echo $cssFile; ?></option>
@@ -83,17 +83,17 @@ if($_POST['submit'])
 				</select>
 			</div>
 			
-			<div class='startTimeCol'>
+			<div class='startTimeCol ss-col'>
 				<input name='items<?php echo $id; ?>-startTime' type='text' size='11' class='datePicker required' value='<?php echo $startTime; ?>' maxlength="10" />
 			</div>
-			<div class='endTimeCol'>
+			<div class='endTimeCol ss-col'>
 				<input name='items<?php echo $id; ?>-endTime' type='text' size='11' class='datePicker required' value='<?php echo $endTime; ?>' maxlength="10" />
 			</div>
-			<div class='repeatYearlyCol'>
+			<div class='repeatYearlyCol ss-col'>
 				<input type='checkbox' name='items<?php echo $id; ?>-repeatYearly' <?php echo $repeatedYearly?> />
 				<?php //TODO UI get Checkbox centered ?>
 			</div>
-			<div class='miscCol'>
+			<div class='miscCol ss-col'>
 				<input type='checkbox' name='items<?php echo $id; ?>-delete' class='hiddenInput' />
 				<input type='hidden' name='itemKeys[]' class='hiddenInput' value='<?php echo $id; ?>' />
 				<a class='deleteLink' href='#'>Delete</a>
