@@ -24,32 +24,32 @@ if($_POST['submit'])
 <?php }?>
 
 <div id='scheduledItemsHeader'>
-	<div class='styleSheetCol'>Css File Name</div>
-	<div class='startTimeCol'>Start Date</div>
-	<div class='endTimeCol'>End Date</div>
-	<div class='repeatYearlyCol'>Repeat Yearly</div>
+	<div class='styleSheetCol ss-col'>Css File Name</div>
+	<div class='startTimeCol ss-col'>Start Date</div>
+	<div class='endTimeCol ss-col'>End Date</div>
+	<div class='repeatYearlyCol ss-col'>Repeat Yearly</div>
 </div>
 
 <!-- This div contains a blank record that will be used by jQuery as a template for adding new records -->
 <div id='newStyleTemplate'>
 	<div class='scheduledItem' id='newStyleNUMZ'>
-		<div class='styleSheetCol'>
+		<div class='styleSheetCol ss-col'>
 			<select name='newStyleNUMZ-stylesheet' class='required'>
 			<?php foreach($cssFiles as $cssFile){?>
 				<option value="<?php echo $cssFile; ?>"><?php echo $cssFile; ?></option>
 			<?php }?>
 			</select>
 		</div>
-		<div class='startTimeCol'>
+		<div class='startTimeCol ss-col'>
 			<input name='newStyleNUMZ-startTime' type='text' size='11' class='datePicker required' maxlength="10" />
 		</div>
-		<div class='endTimeCol'>
+		<div class='endTimeCol ss-col'>
 			<input name='newStyleNUMZ-endTime' type='text' size='11' class='datePicker required' maxlength="10" />
 		</div>
-		<div class='repeatYearlyCol'>
+		<div class='repeatYearlyCol ss-col'>
 			<input type='checkbox' name='newStyleNUMZ-repeatYearly' />
 		</div>
-		<div class='miscCol'>
+		<div class='miscCol ss-col'>
 			<input type='checkbox' name='newStyleNUMZ-delete' class='hiddenInput' />
 			<input type="hidden" name='newStyleKeys[]' class='hiddenInput' value='NUMZ' />
 			<a class='deleteLink' href='#'>Delete</a>

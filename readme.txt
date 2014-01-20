@@ -1,13 +1,13 @@
 === WP Scheduled Styles ===
 Contributors: wpgwiggum
-Tags: plugin, style, holidays, scheduled, schedule, cron, cronjob
+Tags: plugin, style, holidays, scheduled, schedule, cron, cronjob, holiday
 Donate Link:  http://www.itegritysolutions.ca/community/wordpress/scheduled-styles
 Requires at least: 3.4
-Tested up to: 3.5
-Version: 1.1.0
-Stable tag: 1.1.0
+Tested up to: 3.8
+Version: 1.2.0
+Stable tag: 1.2.0
 
-Schedule a css file to display on the live site for holidays or special events.
+Schedule a css file to display on the live site for holidays or special events. (Available from Appearance - Scheduled Styles)
 
 == Description ==
 
@@ -29,6 +29,11 @@ This section describes how to install the plugin and get it working.
 1. This is the settings page. Pretty simple.
 
 == Changelog ==
+
+= 1.2.0 =
+* Updated to support WordPress 3.8 and new look
+* Fixed Calendar (datepicker) from not appearing
+* [Updated January 20, 2014]
 
 = 1.1.0 =
 * Plugin searches .css files and allows you to select from a dropdown (instead of typing)

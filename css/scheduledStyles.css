@@ -1,7 +1,11 @@
 @CHARSET "ISO-8859-1";
 /* Admin Page Layout Styles */
 #scheduledStylesAdminPage{
-	width:550px;
+	width:650px;
+}
+
+.ss-col{
+	margin-left:10px;
 }
 
 #scheduledStylesAdminPage div div{
@@ -18,7 +22,7 @@
 	margin-top:8px;
 }
 .styleSheetCol{width:180px;}
-.startTimeCol, .endTimeCol{width:100px;}
+.startTimeCol, .endTimeCol{width:120px;}
 .repeatYearlyCol {width:50px;}
 .scheduledItem .repeatYearlyCol{height:26px;line-height: 26px;}
 .hiddenInput {display:none;}
