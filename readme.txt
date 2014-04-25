@@ -3,9 +3,9 @@ Contributors: wpgwiggum
 Tags: plugin, style, holidays, scheduled, schedule, cron, cronjob, holiday
 Donate Link:  http://www.itegritysolutions.ca/community/wordpress/scheduled-styles
 Requires at least: 3.4
-Tested up to: 3.8
-Version: 1.2.3
-Stable tag: 1.2.3
+Tested up to: 3.9
+Version: 1.3
+Stable tag: 1.3
 
 Schedule a css file to display on the live site for holidays or special events. (Available from Appearance - Scheduled Styles)
 
@@ -14,6 +14,8 @@ Schedule a css file to display on the live site for holidays or special events. 
 This plugin allows a wordpress administrator to schedule an additional css file to display on the website for holidays or special events for all visitors.
 
 The css file will be added to the live site. Great for setting a Christmas theme!
+
+If you just want to have a theme loaded instead of just a css file, check out the wp-scheduled-themes plugin.
 
 == Installation ==
 
@@ -29,6 +31,10 @@ This section describes how to install the plugin and get it working.
 1. This is the settings page. Pretty simple.
 
 == Changelog ==
+
+= 1.3 =
+* Updated to only load JS and CSS on pertinent WP Admin screens
+* [Updated April 25, 2014]
 
 = 1.2.3 =
 * Updated to support WordPress 3.8 and new look
@@ -49,6 +55,9 @@ This section describes how to install the plugin and get it working.
 * [Created August 14, 2011]
 
 == Upgrade Notice ==
+
+= 1.3 ==
+* Fix bug that causes some Admin screens to not work
 
 = 1.0.1 =
 * Minor bug fix in main code file

@@ -4,7 +4,7 @@
  * Plugin URI: http://www.itegritysolutions.ca/community/wordpress/scheduled-styles
  * Description: Schedule a css file for use on the live site for holidays or special events.
  * Author: Adam Erstelle
- * Version: 1.2.3
+ * Version: 1.3
  * Author URI: http://www.itegritysolutions.ca/
  * 
  * PLEASE NOTE: If you make any modifications to this plugin file directly, please contact me so that
@@ -63,7 +63,7 @@ if(!class_exists('ScheduledStyles')){
 			if(is_admin()){
 				register_activation_hook(__FILE__, array(&$this,'install'));
 				add_action('admin_menu', array(&$this,'admin_menu_link'));
-				$this->enqueueItems();
+				add_action('admin_enqueue_scripts',array(&$this,'admin_enqueue_scripts'));
 			}
 			else{
 				add_action('wp_head', array(&$this,'wp_head'));
@@ -189,7 +189,9 @@ if(!class_exists('ScheduledStyles')){
 		/**
 		 * Adds the javascript and CSS to the administration page
 		 */
-		function enqueueItems(){
+		function admin_enqueue_scripts($hook){
+			if($hook != 'appearance_page_scheduledStyles') return;
+		
 			wp_enqueue_script('jquery-ui-datepicker');
 			wp_enqueue_script('jQueryValidator',$this->pluginURL .'/js/jquery.validate.min.js',array('jquery'));
 			wp_enqueue_script('scheduledStylesScript',$this->pluginURL .'/js/scheduledStyles.js',array('jquery','jquery-ui-core','jquery-ui-datepicker','jQueryValidator'));
