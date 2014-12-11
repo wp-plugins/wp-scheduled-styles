@@ -4,7 +4,7 @@
  * Plugin URI: http://www.itegritysolutions.ca/community/wordpress/scheduled-styles
  * Description: Schedule a css file for use on the live site for holidays or special events.
  * Author: Adam Erstelle
- * Version: 1.3
+ * Version: 1.4
  * Author URI: http://www.itegritysolutions.ca/
  * 
  * PLEASE NOTE: If you make any modifications to this plugin file directly, please contact me so that
@@ -32,11 +32,6 @@ if(!class_exists('ScheduledStyles')){
 		var $pluginURL;
 		var $pluginDIR;
 		var $activeStyle;
-		
-		/**
-		 * PHP4 Constructor
-		 */
-		function ScheduledStyles(){$this->__construct();}
 		
 		/**
 		 * Class Constructor, Checks to see if style sheets should be included and registers the plugin with Wordpress
