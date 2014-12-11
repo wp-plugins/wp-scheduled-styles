@@ -5,7 +5,7 @@ Donate Link:  http://www.itegritysolutions.ca/community/wordpress/scheduled-styl
 Requires at least: 3.4
 Tested up to: 4.0.1
 Version: 1.4
-Stable tag: 1.3
+Stable tag: 1.4
 
 Schedule a css file to display on the live site for holidays or special events. (Available from Appearance - Scheduled Styles)
 
