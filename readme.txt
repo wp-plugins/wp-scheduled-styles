@@ -3,7 +3,7 @@ Contributors: wpgwiggum
 Tags: plugin, style, holidays, scheduled, schedule, cron, cronjob, holiday
 Donate Link:  http://www.itegritysolutions.ca/community/wordpress/scheduled-styles
 Requires at least: 3.4
-Tested up to: 4.0.1
+Tested up to: 4.2
 Version: 1.4
 Stable tag: 1.4
 
